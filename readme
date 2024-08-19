@@ -1,0 +1,13 @@
+creacion de la base de datos:
+
+    create database portafolio;
+
+    use portafolio;
+
+    create table usuarios(gmail varchar(255) not null unique, usuario varchar(50) not null unique, password varchar(255) not null);
+
+ajustes de archivo .env:
+
+    ir ala carpeta back 
+    abrir el archivo que se llama .env
+    buscar el apartado que die db_pass y db_user, ycolocar tus datos de mysql

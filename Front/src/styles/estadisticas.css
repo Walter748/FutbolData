@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px; /* Añade un espacio entre los dos bloques */
+}
+
+.selector-equipo {
+    flex: 1;
+}
+
+.lista-equipos {
+    list-style: none;
+    padding: 0;
+}
+
+.equipo-item {
+    padding: 10px;
+    width: 225px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.equipo-item:hover {
+    background-color: #f0f0f0;
+}
+
+.equipo-item.seleccionado {
+    background-color: #cce5ff;
+    border-color: #004085;
+    color: #004085;
+}
+
+.jugadores-lista {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.lista-jugadores {
+    list-style: none;
+    padding: 0;
+}
+
+.jugador-item {
+    padding: 10px;
+    width: 225px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.jugador-item:hover {
+    background-color: #f0f0f0;
+}
+
+.jugador-item.seleccionado {
+    background-color: #cce5ff;
+    border-color: #004085;
+    color: #004085;
+}
+
+.estadisticas-jugador {
+    flex: 1;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #242424; /* Fondo blanco para resaltar las estadísticas */
+}
+
+.estadisticas-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.estadisticas-lista li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd; /* Añade una línea inferior para separar las estadísticas */
+}

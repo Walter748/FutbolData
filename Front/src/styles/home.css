@@ -1,0 +1,18 @@
+.home-container {
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #242424;
+    color: white;
+}
+
+.content-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+}
