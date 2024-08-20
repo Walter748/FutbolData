@@ -49,6 +49,7 @@ const Login = () => {
             placeholder="Email"
             value={gmail}
             onChange={(e) => setGmail(e.target.value)}
+            required
           />
           <input
             className="login-input"
@@ -56,6 +57,7 @@ const Login = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <button className="login-button" type="submit">Iniciar Sesión</button> 
           <p className="register-text">¿Todavía no tienes una cuenta?  <Link className='link' to='/register'>Presiona aquí</Link></p>

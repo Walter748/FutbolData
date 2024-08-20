@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/register.css'
 
 const Register = () => {
   const [gmail, setGmail] = useState('');
   const [password, setPassword] = useState('');
   const [usuario, setUsuario] = useState('');
+  const navigate = useNavigate();
   
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -15,10 +16,10 @@ const Register = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ gmail, usuario, password }), // Corregido: enviar gmail, nombreUsuario y password al servidor
+        body: JSON.stringify({ gmail, usuario, password }), 
       });
       const data = await response.json();
-      alert(data.message); // Mostrar mensaje de respuesta del servidor
+      alert(data.message);
 
       if (response.ok) {
         navigate('/');
@@ -39,18 +40,21 @@ const Register = () => {
         placeholder="Email"
         value={gmail}
         onChange={(e) => setGmail(e.target.value)}
+        required
       />
       <input
         type="text"
         placeholder="Usuario"
         value={usuario}
         onChange={(e) => setUsuario(e.target.value)}
+        required
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        required
       />
       <button type="submit">Registrar</button>
       <p className="loginr-text">¿Ya tenes una cuenta? <Link className='link' to='/'>Presiona aquí</Link></p>

@@ -52,7 +52,6 @@ const Estadisticas = ({ competicionSeleccionada }) => {
             { id: 1104, nombre: 'Georgia' },
             { id: 770, nombre: 'Chequia' }
         ],
-        // Agrega aquí los datos para otras competiciones si es necesario
     };
 
     useEffect(() => {
@@ -69,7 +68,7 @@ const Estadisticas = ({ competicionSeleccionada }) => {
                     });
                     const respuesta = await response.json();
                     setJugadores(respuesta.response);
-                    setJugadorSeleccionado(null); // Restablecer jugador seleccionado
+                    setJugadorSeleccionado(null); 
                 } catch (error) {
                     console.error("Error fetching data:", error);
                 }
@@ -80,7 +79,7 @@ const Estadisticas = ({ competicionSeleccionada }) => {
 
     useEffect(() => {
         setEquipos(equiposData[competicionSeleccionada] || []);
-        setEquipoSeleccionado(null); // Restablecer selección de equipo cuando cambie la competición
+        setEquipoSeleccionado(null); 
     }, [competicionSeleccionada]);
 
     const mostrarEstadisticasJugador = (jugador) => {
